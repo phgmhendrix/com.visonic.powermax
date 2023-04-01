@@ -192,12 +192,14 @@ class PanelDevice extends Homey.Device {
               // Sensor has been removed from panel
               device.setUnavailable(this.homey.__('error.sensor_removed'))
             } else {
+              this.homey.log('##################' + elem.zchime)
+              this.homey.log(this.homey.__(elem.zchime) ?? elem.zchime)
               device.setAvailable()
               // Update sensor setting info
               var setting = {
                 location: elem.zname,
-                type: elem.ztypeName,
-                chime: elem.zchime,
+                type: this.homey.__(elem.ztypeName) ?? elem.ztypeName,
+                chime: this.homey.__(elem.zchime) ?? elem.zchime,
                 partition: elem.partition.join(', ')
               }
               device.setSettings(setting)
@@ -352,8 +354,8 @@ class PanelDevice extends Homey.Device {
 				let setting = {
 					zone: idx,
 					location: elem.zname,
-					type: elem.ztypeName,
-					chime: elem.zchime,
+					type: this.homey.__(elem.ztypeName) ?? elem.ztypeName,
+					chime: this.homey.__(elem.zchime) ?? elem.zchime,
 					partition: elem.partition.join(', ')
 				}
 				if (type === 'magnet' && elem.stype === 'Magnet') {

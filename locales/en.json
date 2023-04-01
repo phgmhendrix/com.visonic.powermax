@@ -1,5 +1,8 @@
 {
-  "pair": {
+	"status_off": "Off",
+	"status_on": "On",
+
+	"pair": {
 		"panel": {
 			"name": "Add Visonic PowerMax panel",
 			"explain": "This application can connect to a Visonic PowerMax panel that communicates serial data via TCP/IP. Please specify the location of the panel in the network.",

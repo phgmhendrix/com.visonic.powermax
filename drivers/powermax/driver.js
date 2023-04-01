@@ -240,6 +240,7 @@ class PanelDriver extends Homey.Driver {
 
 	// Get a list of all registered panels
 	getPanels() {
+		console.log('getPanels 1');
 		let list = []
     this.getDevices().forEach(device => {
       let elem = device.powermax.settings.config
@@ -293,6 +294,7 @@ class PanelDriver extends Homey.Driver {
 
   // Get the event log for a panel (use cache if !force)
 	getEventLog(panel, force) {
+		this.log('GetEventLog 1');
 		let result = false
     let panelDevice = this.getPanelDeviceById(panel)
 		if (panelDevice != null) {

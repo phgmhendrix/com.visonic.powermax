@@ -925,51 +925,6 @@
 			}]
 		}]
 	},
-  "permissions": [
-		"homey:manager:speech-output"
-	],
-	"speech": [{
-			"id": "panel",
-			"importance": 0.5,
-			"triggers": {
-				"en": ["alarm", "panel"],
-				"nl": ["alarm", "paneel", "alarmpaneel"]
-			}
-		},
-		{
-			"id": "zone",
-			"importance": 0.5,
-			"triggers": {
-				"en": ["zone", "zones", "sensor", "sensors", "detector", "detectors"],
-				"nl": ["zone", "zones", "zonde", "zoons", "zonen", "sensor", "sensors", "sensoren", "detector", "detectors", "detectoren"]
-			}
-		},
-		{
-			"id": "open",
-			"importance": 0.5,
-			"triggers": {
-				"en": ["open", "alarm", "tripped"],
-				"nl": ["open", "alarm", "verstoord"]
-			}
-		},
-		{
-			"id": "status",
-			"importance": 0.5,
-			"triggers": {
-				"en": ["state", "status"],
-				"nl": ["status"]
-			}
-		},
-		{
-
-			"id": "trouble",
-			"importance": 0.5,
-			"triggers": {
-				"en": ["trouble", "troubles", "broken", "error", "fault", "problem"],
-				"nl": ["fout", "fouten", "kapot", "probleem"]
-			}
-		}
-	],
 	"dependencies": {
 		"visonic-api": "*"
 	}

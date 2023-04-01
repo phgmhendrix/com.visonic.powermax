@@ -9,7 +9,6 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 */
 
 const Homey = require('homey')
-const locale = 'en' // only Dutch & English supported
 const pm = require('powermax-api')
 
 // Speech ids and actions
@@ -23,6 +22,7 @@ class PowerMaxApp extends Homey.App {
 
 	onInit() {
 		this.log('PowerMaxApp is running...')
+		//this.homey.api.get('getPanels')
 		// this.panelDriver = this.homey.drivers.getDriver('powermax')
 	}
 
@@ -151,10 +151,12 @@ class PowerMaxApp extends Homey.App {
 
 	// External API: get an array of panels (for panel selection)
 	getPanels() {
+		console.log('getPanels');
 		return this.homey.drivers.getDriver('powermax').getPanels()
 	}
 
 	getEventLog(panel, force) {
+		console.log('GetEventLog')
 		return this.homey.drivers.getDriver('powermax').getEventLog(panel, force)
 	}
 

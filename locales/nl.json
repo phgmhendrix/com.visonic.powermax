@@ -1,5 +1,10 @@
 {
-    "pair": {
+	"Off": "Uit",
+	"Perimeter": "Omgeving",
+	"Melody": "Melodie",
+	"Interior": "Interieur",
+
+	"pair": {
 		"panel": {
 			"name": "Voeg Visonic PowerMax paneel toe",
 			"explain": "Deze applicatie kan verbinding maken met een Visonic PowerMax paneel die seriele data verstuurt via TCP/IP. Geef aan op welk adres in het netwerk het paneel gevonden kan worden.",
